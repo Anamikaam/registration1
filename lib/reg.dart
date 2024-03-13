@@ -34,6 +34,7 @@ class _RegistrationState extends State<Registration> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Enter your Name',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -42,12 +43,15 @@ class _RegistrationState extends State<Registration> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Enter your Roll No',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),),
+                  SizedBox(height: 20),
                   TextField(
                     obscureText: false,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Enter your Email',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),),
                   SizedBox(height: 20),
                   const TextField( obscureText: true,
