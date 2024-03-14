@@ -10,8 +10,7 @@ class Registration extends StatefulWidget {
 class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return  Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.teal,
             title: Center(
@@ -65,7 +64,7 @@ class _RegistrationState extends State<Registration> {
                       child:Text('Log In',style: TextStyle(fontSize: 20,color: Colors.white),)),
                 ]),
           ),
-        ));
+        );
   }
 }
 

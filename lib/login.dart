@@ -11,8 +11,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.teal,
             title: Center(
@@ -40,13 +39,12 @@ class _LoginState extends State<Login> {
                 ),),
               SizedBox(height: 20),
               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.teal,fixedSize: Size(300, 50)),
-                  onPressed: (){();},
+                  onPressed: (){ ();},
                   child:Text('Log In',style: TextStyle(fontSize: 20,color: Colors.white),)),
               SizedBox(height: 20),
               Text('Dont have an account?Register now',style: TextStyle(color: Colors.white)),
             ]
             ),
-          ),)
-    );
+          ),);
   }
 }

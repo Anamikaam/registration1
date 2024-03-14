@@ -12,8 +12,7 @@ class Scanner extends StatefulWidget {
 class _ScannerState extends State<Scanner> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.teal,
         body: Center(
           child: Column(
@@ -24,16 +23,21 @@ class _ScannerState extends State<Scanner> {
                 radius: 50,
                 child: Icon(Icons.person,size:50,),
               ),
+              SizedBox(
+                height: 50,),
               QrImageView(
                 data: '1234567890',
                 version: QrVersions.auto,
                 size: 200.0,
               ),
+              SizedBox(height: 20),
+              ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.teal,fixedSize: Size(300, 50)),
+                  onPressed: (){();},
+                  child:Text('Scan',style: TextStyle(fontSize: 20,color: Colors.white),)),
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
