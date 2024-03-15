@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:registration/profile.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -39,7 +40,10 @@ class _LoginState extends State<Login> {
                 ),),
               SizedBox(height: 20),
               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.teal,fixedSize: Size(300, 50)),
-                  onPressed: (){ ();},
+                  onPressed: (){ Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Profile()),
+                  );},
                   child:Text('Log In',style: TextStyle(fontSize: 20,color: Colors.white),)),
               SizedBox(height: 20),
               Text('Dont have an account?Register now',style: TextStyle(color: Colors.white)),

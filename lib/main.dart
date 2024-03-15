@@ -9,5 +9,5 @@ import 'package:registration/scan.dart';
 import 'login.dart';
 
 void main() {
-  runApp(MaterialApp(home: Profile()));
+  runApp(MaterialApp(home: Login()));
 }
