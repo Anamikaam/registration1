@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:registration/profile.dart';
+import 'package:registration/reg.dart';
+import 'package:registration/scan.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -23,7 +25,7 @@ class _LoginState extends State<Login> {
           backgroundColor: Colors.teal,
           body: Padding(
             padding:  const EdgeInsets.symmetric(horizontal: 40),
-            child: Column(mainAxisAlignment: MainAxisAlignment.center,children: [
+            child: Column(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
               TextField(
                 obscureText: false,
                 decoration: InputDecoration(
@@ -33,7 +35,7 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(height: 20),
-              const TextField( obscureText: true,
+               TextField( obscureText: true,
                 decoration: InputDecoration(border: OutlineInputBorder(),
                   labelText: 'Enter your password',
                   labelStyle: TextStyle(color: Colors.white),
@@ -46,7 +48,13 @@ class _LoginState extends State<Login> {
                   );},
                   child:Text('Log In',style: TextStyle(fontSize: 20,color: Colors.white),)),
               SizedBox(height: 20),
-              Text('Dont have an account?Register now',style: TextStyle(color: Colors.white)),
+              TextButton(onPressed: (){
+
+                Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Registration()));
+              },child:  Text('Dont have an account?Register now',style: TextStyle(color: Colors.white)),
+              ),
+
             ]
             ),
           ),);
